@@ -1,5 +1,6 @@
 .hero-bg {
-    background-image: url('../assets/img/ba1.jpg'); /* Reemplaza 'ruta-de-tu-imagen.jpg' con la URL de tu imagen de fondo */
+    background-image: linear-gradient(to right, #000000cc, #0000004c, #000000bb), url("../assets/img/hawaii.jpg");
+    /*background-image: url('../assets/img/ba1.jpg'); /* Reemplaza 'ruta-de-tu-imagen.jpg' con la URL de tu imagen de fondo */
     background-size: cover;
     background-position: center;
     color: #ffffff; /* Cambia el color de texto según tu diseño */

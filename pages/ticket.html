@@ -11,6 +11,7 @@
   </head>
   <body>
     <header>
+      <section>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="gris" aria-label="Offcanvas navbar large">
         <div class="container">
           <div>
@@ -28,16 +29,16 @@
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">La Conferencia</a>
+                  <a class="nav-link active" aria-current="page"  href="../index.html" >La Conferencia</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Los oradores</a>
+                  <a class="nav-link" href="../index.html" href="#oradores">Los oradores</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">El lugar y la fecha</a>
+                  <a class="nav-link" href="../index.html" href="#lugarFecha">El lugar y la fecha</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Conviértete en orador</a>
+                  <a class="nav-link" href="../index.html" href="#formularioOrador">Conviértete en orador</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link " href="#" style="color:darkgreen">Comprar tickets</a>
@@ -47,27 +48,31 @@
           </div>
         </div>
       </nav>
+      </section>
+
     </header>
     <main class="container justify-content-center align-items-center" style="width:60rem" >
       
-      
+    <section> 
     <div class="container text-center mt-5 mb-5 ">
-          <div class="row align-items-center">
+          <div class="row align-items-center ">
             <div class="col">
+               
               <div class="card border-primary text-center" style="width: 18rem;" >
-                <h2>Estudiante</h2>
+                <h2 class ="mt-4">Estudiante</h2>
                 <div class="card-body text-center">
-                <h5 class="card-title text-center">tienen un descuento</h5>
+                <h5 class="card-title text-center">Tienen un descuento</h5>
                 <h2>80%</h2>
                 <p class="card-text text-center">* Presentar documentacion</p>
               </div>
             </div>
           </div>  
+        
           <div class="col">
             <div class="card border-success text-center" style="width: 18rem;">
-              <h2>Trainee</h2>
+              <h2 class ="mt-4" >Trainee</h2>
               <div class="card-body text-center">
-                <h5 class="card-title text-center">tienen un descuento</h5>
+                <h5 class="card-title text-center">Tienen un descuento</h5>
                 <h2>50%</h2>
                 <p class="card-text text-center">* Presentar documentacion</p>
               </div>
@@ -75,7 +80,7 @@
           </div>
           <div class="col">
             <div class="card border-danger text-center" style="width: 18rem;">
-              <h2>Junior</h2>
+              <h2 class ="mt-4">Junior</h2>
               <div class="card-body text-center">
                 <h5 class="card-title text-center">tienen un descuento</h5>
                 <h2>15%</h2>
@@ -84,30 +89,98 @@
             </div>
           </div>            
       </div>
+    </section> 
+    <section>
     <div class="mb-3">
     <div class="container">
       <div class="row text-center">
       <p>VENTA</p>
-      <h1>VALOR DE TICKET $200</h1>      
-    <form class="row g-3" width="60">
-    <div class="col-md-6 " >
-      <label for="inputNombre" class="form-label">Nombre</label>
-      <input type="nombre" class="form-control" id="inputNombre" placeholder="Nombre">
+      <h1>VALOR DE TICKET $200</h1>
+      <form class="row g-3 needs-validation" novalidate>
+        <div class="col-md-6">
+          <label for="validationCustom01" class="form-label"></label>
+          <input type="Nombre" class="form-control" id="validationCustom01" placeholder="Nombre"  value=" " required>
+          <div class="valid-feedback">
+            Campo completado
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="validationCustom02" class="form-label"></label>
+          <input type="text" class="form-control" id="validationCustom02" placeholder="Nombre"  value=" " required>
+          <div class="valid-feedback">
+            Campo completado
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustomUsername" class="form-label"></label>
+          <div class="input-group has-validation">
+            <input class="input-group-text" id="inputGroupPrepend" placeholder="Nombre" required ></input>
+            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+            <div class="invalid-feedback">
+              Ingrese un mail valido
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="validationCustom03" class="form-label">City</label>
+          <input type="text" class="form-control" id="validationCustom03" required>
+          <div class="invalid-feedback">
+            Please provide a valid city.
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom04" class="form-label">State</label>
+          <select class="form-select" id="validationCustom04" required>
+            <option selected disabled value="">Choose...</option>
+            <option>...</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid state.
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom05" class="form-label">Zip</label>
+          <input type="text" class="form-control" id="validationCustom05" required>
+          <div class="invalid-feedback">
+            Please provide a valid zip.
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck">
+              Agree to terms and conditions
+            </label>
+            <div class="invalid-feedback">
+              You must agree before submitting.
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Submit form</button>
+        </div>
+      </form>  
+      
+
+
+
+    <form class="row g-3" >
+    <div class="col-md-6 text-left" >
+      <input type="Nombre" class="form-control is-invalid" id="Nombre" placeholder="Nombre" required>
+        <div class="invalid-feedback">Complete este campo</div>
       </div>
       <div class="col-md-6">
-      <label for="Apellido" class="form-label">Apellido</label>
-      <input type="Apellido" class="form-control" id="inputApellido" placeholder="Apellido">
+      <input type="Apellido" class="form-control is-valid" id="Apellido" placeholder="Apellido" required>
       </div>
       <div class="col-12">
-      <label for="Correo" class="form-label">Correo</label>
-      <input type="text" class="form-control" id="inputCorreo"placeholder="Correo" >
+      <input type="text" class="form-control is-valid" id="Correo" placeholder="Correo" required >
       </div>
       <div class="col-md-6">
-      <label for="inputCantidad" class="form-label">Cantidad</label>
-        <input type="text" class="form-control" id="inputCantidad">
+      <label for="Cantidad" class="text-left form-label">Cantidad></label>
+        <input type="text" class="form-control is-valid" id="inputCantidad" placeholder="Cantidad" required>
       </div>
       <div class="col-md-6">
-        <label for="inputCategoria" class="form-label">Categoria</label>
+        <label for="inputCategoria" class="text-left form-label">Categoria</label>
       <select id="inputCategoria" class="form-select">
         <option selected>Estudiante</option>
         <option>Trainee</option>
@@ -115,15 +188,16 @@
       </select>
       </div>
       <div class=" mb-3">
-        <input type="text" class="form-control bg-info " id="exampleFormControlInput1" placeholder="Total a Pagar: $ ">
+        <input type="text" class="form-control bg-primary-subtle" id="exampleFormControlInput1" placeholder="Total a Pagar: $ ">
       </div>
       <div class="col mb-3">
-        <button type="button" class="btn btn-lg text-white bg-success"  style="width: 100%">Borrar</button>
+        <button type="button" class="btn btn-lg text-white" id="verde" style="width: 100%">Borrar</button>
       </div>
       <div class="col">
-        <button type="button" class="btn btn-lg text-white bg-success" style="width: 100%">Resumen</button>
+        <button type="button" class="btn btn-lg text-white" id="verde" style="width: 100%">Resumen</button>
       </div>
       </form>
+    </section>   
   </main>                 
 
   <footer class="degradado text-light text-center">
