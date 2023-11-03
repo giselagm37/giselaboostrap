@@ -18,7 +18,7 @@ console.log(miDireccion);
 /*let dni=parseInt(prompt("Ingrese su Dni"));
 if (dni!==333){
 alert("ACCESO DENEGADO");
-console.log(Acceso denegado);
+console.log(Acceso denegado);GILA
 }else{
 alert("Bienvenido, acceso permitido);
 let nombre=prompt("Ingrese su nombre")
@@ -35,9 +35,11 @@ const validarFormulario=(e) => {
     switch (e.target.name) {// cambia el mensaje
         case"nombre":     //sino se completa el campo
             if(expresiones.nombre.test(e.target.value)){   //compara que sea un nombre de acuerdo a lo permitido por expresiones
-                                                           //devuelve verdadero
+                document.getElementById('Grupo__nombre').classList.remove('formulario__grupo-incorrecto');                                           //devuelve verdadero
+                document.getElementById('Grupo__nombre').classList.add('formulario__grupo-correcto');
             } else {
-                document.getElementById('Grupo__nombre')
+                document.getElementById('Grupo__nombre').classList.remove('formulario__grupo-incorrecto');
+                
             }
         break;
         case"apellido":     //sino se completa el campo
