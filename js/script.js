@@ -35,10 +35,12 @@ const validarFormulario=(e) => {
     switch (e.target.name) {// cambia el mensaje
         case"nombre":     //sino se completa el campo
             if(expresiones.nombre.test(e.target.value)){   //compara que sea un nombre de acuerdo a lo permitido por expresiones
-                document.getElementById('Grupo__nombre').classList.remove('formulario__grupo-incorrecto');                                           //devuelve verdadero
-                document.getElementById('Grupo__nombre').classList.add('formulario__grupo-correcto');
+                document.getElementById('grupo__nombre').classList.remove('formulario__grupo-incorrecto');                                           //devuelve verdadero
+                document.getElementById('grupo__nombre').classList.add('formulario__grupo-correcto');
+                document.querySelectorAll('#grupo__nombre i')
+            
             } else {
-                document.getElementById('Grupo__nombre').classList.remove('formulario__grupo-incorrecto');
+                document.getElementById('grupo__nombre').classList.remove('formulario__grupo-incorrecto');
                 
             }
         break;
