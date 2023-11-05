@@ -23,7 +23,7 @@ background-image: linear-gradient(90deg, #002231 0%, #1871ab 100%);
 }
 
 #verde{
-    background-color: #29ab18;
+    background-color: #49ce38;
 }
 #gris{
     background-color: rgb(31, 29, 29);
@@ -38,4 +38,7 @@ background-image: linear-gradient(90deg, #002231 0%, #1871ab 100%);
     border:5px solid blue;
 
 
+}
+.verde{
+    background-color: #4b9c40;
 }
