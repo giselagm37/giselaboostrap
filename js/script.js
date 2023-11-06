@@ -41,10 +41,11 @@ function borrar() {
     document.getElementById("apellido").value = "";
     document.getElementById("correo").value = "";
     document.getElementById("cantidad").value = "";
-    document.getElementById("categoria").value = "";
+    document.getElementById("resultado").value = "";
+    document.getElementById("totalPagar").value="";
   
     // Borrar el campo de total
-    document.getElementById("resultadoTotal").value = "";
+    document.getElementById("total").value = "";
       }
       function calcularTotal() {
         var categoria = document.getElementById("categoria").value;
@@ -69,6 +70,12 @@ function borrar() {
         // Mostrar el resultado
         document.getElementById("resultado").innerText = "$" + totalPagar.toFixed(2);
       }
+
+// Mostrar mensaje y borrar después de 3 segundos
+    mostrarMensaje("Compra realizada con éxito");
+    setTimeout(borrarMensaje, 3000);
+
+
 /*
 var resumen=document.getElementById('resumen');
 var guardar=document.getElementById('guardar');
@@ -137,7 +144,7 @@ function cantidad(row){//modificar cantidad
 } 
 */
 
-      function total() {
+/*      function total() {
         var categoria = document.getElementById("categoria").value;
         var descuento = 0;
     
