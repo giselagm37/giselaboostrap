@@ -100,8 +100,9 @@
       <p class="text-center">VENTA</p>
       <h1 class="text-center mb-5">VALOR DE TICKET $200</h1>  
     
-      <form class="row g-3 needs-validation "   novalidate>
+        <form class="row g-3 needs-validation" novalidate>
       <!--NOMBRE-->  
+      
         <div class="col-md-6">
           <input type="text" class="form-control" id="nombre" placeholder="Nombre"  required>
           <div class="valid-feedback">
@@ -116,18 +117,18 @@
           </div>
         </div>
         <!--CORREO-->
-        <div class="col-md-12">
+        <div class="col-md-12 input-group has-validation">
           <input type="text" class="form-control" id="correo" placeholder="Correo" required>
-          <div class="valid-feedback">
-            Campo completo!
+          <div class="invalid-feedback">
+            Campo incompleto!
           </div>
         </div>
         <!--CANTIDAD-->
         <div class="col-md-6">
           <label for="cantidad" class="form-label">Cantidad</label>
           <input type="number" class="form-control" id="cantidad" placeholder="Cantidad" required>
-          <div class="valid-feedback">
-            Campo Completo!
+          <div class="invalid-feedback">
+            Campo incompleto!
           </div>
         </div>
         <!--CATEGORIA-->
@@ -159,7 +160,7 @@
               <button class="btn btn-block text-white" type="button" style="width: 100%"  id="verde" onclick="borrar()" >Borrar</button>
             </div>
             <div class="col-6">
-              <button class="btn btn-block text-white" type="button" style="width: 100%"  id="verde" onclick="calcularTotal()">Resumen</button>
+              <button class="btn btn-block text-white" type="submit" style="width: 100%"  id="verde" onclick="calcularTotal()">Resumen</button>
             </div>
           </div>
         </div>
