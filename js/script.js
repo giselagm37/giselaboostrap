@@ -35,6 +35,7 @@ const forms = document.querySelectorAll('.needs-validation')
       }, false)
     })
 
+
 function borrar() {
     // Borrar los campos de cantidad y categoría
     document.getElementById("nombre").value = "";
@@ -42,7 +43,7 @@ function borrar() {
     document.getElementById("correo").value = "";
     document.getElementById("cantidad").value = "";
     document.getElementById("resultado").value = "";
-    document.getElementById("totalPagar").value="";
+   
   
     // Borrar el campo de total
     document.getElementById("total").value = "";
@@ -75,7 +76,10 @@ function borrar() {
     mostrarMensaje("Compra realizada con éxito");
     setTimeout(borrarMensaje, 3000);
 
-
+    function borrarMensaje() {
+    var mensajeLabel = document.getElementById("mensajeLabel");
+    mensajeLabel.innerHTML = "";
+    }
 /*
 var resumen=document.getElementById('resumen');
 var guardar=document.getElementById('guardar');
@@ -249,9 +253,7 @@ function cantidad(row){//modificar cantidad
     mensajeLabel.innerHTML = mensaje;
 }
 
-//function borrarMensaje() {
-//    var mensajeLabel = document.getElementById("mensajeLabel");
-//    mensajeLabel.innerHTML = "";
+//
 //}*/
 
 
