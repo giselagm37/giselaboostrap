@@ -46,12 +46,147 @@ function borrar() {
     // Borrar el campo de total
     document.getElementById("resultadoTotal").value = "";
       }
+      function calcularTotal() {
+        var categoria = document.getElementById("categoria").value;
+        var cantidad = parseInt(document.getElementById("cantidad").value); // Valor por defecto es 1
+        var descuento = 0;
+    
+        switch (categoria) {
+          case "estudiante":
+            descuento = 0.8;
+            break;
+          case "trainee":
+            descuento = 0.5;
+            break;
+          case "junior":
+            descuento = 0.15;
+            break;
+        }
+    
+        var valorBase = 200;
+        var totalPagar = cantidad*(valorBase - (valorBase * descuento));
+    
+        // Mostrar el resultado
+        document.getElementById("resultado").innerText = "$" + totalPagar.toFixed(2);
+      }
+/*
+var resumen=document.getElementById('resumen');
+var guardar=document.getElementById('guardar');
+var lista=document.getElementById('lista');
+var data=[];
+resumen.addEventListener("click",resumen);
+guardar.addEventListener("click",guardar);
 
+function resumen(){
+  var id =document.getElementById('id').value;
+  var nombre =document.getElementById('apellido').value;
+  var correo =document.getElementById('correo').value;
+  var cantidad =parseFloat(document.getElementById('cantidad').value);
+  var categoria =document.getElementById('gategoria').value;
+  var total =  200 * (1 - descuento);
+  data.push(
+    {
+      "id":cantidad,
+      "nombre":nombre,
+      "apellido":apellido,
+      "correo":correo,
+      "cantidad": cantidad,
+      "categoria":categoria,
+      "total":total(),
+      
+    }
+  );
+ 
+  //idntificar las tablas
+  var id_row='row'+cantidad;
+  var fila='<tr id='+id_row+'><td>'+nombre+'</td><td>'+apellido+'</td><td>'+correo+'</td><td>'+cantidad+'</td><td>'+categoria+'</td><td>'+total+'</td><td><a href="#" class="btn btn-danger" onclick="eliminar('+cant+')";>eliminar</a><a href="#" class="btn btn-danger" onclick="cantidad('+cant+')";>cantidad</a></td></tr>';
+}
+//agregar a la tabla
+function guardar(){
+$("#lista").append(fila);
+$("#nombre").val('');
+$("#apellido").val('');
+$("#correo").val('');
+$("#cantidad").val('');
+$("#categoria").val('');
+$("#total").val('');
+cant++;
+sumar();
+}
+function sumar(){
+  var tot=0;
+  for(x of data){
+    if(x.id==row){
+      pos=i;
+    }
+    i++;
+  }
+  data.splice(pos,1);//para eliminar
+  sumar();//vuelve a sumar
 
-    function calcularTotal() {
+}
+function cantidad(row){//modificar cantidad
+  var canti=parseFloat(prompt("nueva cantidad"));
+  data[row].cantidad=canti;
+  data[row].total=data[row].cantidad=data[row].precio;
+  var filaid=document.getElementById("row"+row);
+  celda=filaid.getElementBytabName('td');
+  celda[4].innerHTML=canti;  //posiscion
+  celda[6].innerHTML=data[row].total;
+  sumar();
+} 
+*/
+
+      function total() {
+        var categoria = document.getElementById("categoria").value;
+        var descuento = 0;
+    
+        switch (categoria) {
+          case "estudiante":
+            descuento = 0.8;
+            break;
+          case "trainee":
+            descuento = 0.5;
+            break;
+          case "junior":
+            descuento = 0.15;
+            break;
+        }}
+/*    
+        var totalPagar = 200 * (1 - descuento);
+    
+        // Agregar fila a la tabla
+        var tabla = document.getElementById("tablaResultados").getElementsByTagName('tbody')[0];
+        var fila = tabla.insertRow(tabla.rows.length);
+        var celdaEmpleado = fila.insertCell(0);
+        var celdaDescuento = fila.insertCell(1);
+        var celdaTotal = fila.insertCell(2);
+        var celdaBorrar = fila.insertCell(3);
+    
+        celdaEmpleado.innerHTML = categoria;
+        celdaDescuento.innerHTML = (descuento * 100) + "%";
+        celdaTotal.innerHTML = "$" + totalPagar.toFixed(2);
+        celdaBorrar.innerHTML = '<button class="btn btn-danger btn-sm" onclick="borrarFila(this)">Borrar</button>';
+      }
+    
+      function borrarFila(boton) {
+        var fila = boton.parentNode.parentNode;
+        fila.parentNode.removeChild(fila);
+      }
+    
+      function borrarTabla() {
+        var tabla = document.getElementById("tablaResultados").getElementsByTagName('tbody')[0];
+        tabla.innerHTML = "";
+      }
+    
+    
+    
+    
+    
+ /*     function calcularTotal() {
       // Obtener el valor de la categoría seleccionada
       var cantidad = parseFloat(document.getElementById("cantidad").value) || 0;
-      var categoria = document.getElementById("categoria").value
+      var categoria = document.getElementById("categoria").value;
 
       // Precio base del ticket
       var precioBase = 200;
@@ -110,6 +245,6 @@ function borrar() {
 //function borrarMensaje() {
 //    var mensajeLabel = document.getElementById("mensajeLabel");
 //    mensajeLabel.innerHTML = "";
-//}
+//}*/
 
 
